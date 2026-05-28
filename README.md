@@ -1,2 +1,2 @@
 # Autonomous-Mail-Delivery
-A fully autonomous mail-delivery robot that localizes itself from an unknown starting position using only a camera and Bayesian inference. Features PID line-following, RGB color classification, and a hybrid state machine.
+Autonomous mail-delivery robot built using PID line-following, vision-based color detection, and a discrete Bayesian filter for probabilistic localization across 11 office states — no odometry or SLAM. Coordinated via a hybrid state machine; achieved >95% localization accuracy in physical testing.
