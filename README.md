@@ -278,3 +278,5 @@ The node logs every Bayesian update to `belief_log.csv` in the working directory
 ---
 
 *University of Toronto · ROB301 Introduction to Robotics · Final Project · Abanoub Bashara & Solomon Pius · December 2025*
+
+<img width="454" height="464" alt="Image" src="https://github.com/user-attachments/assets/72c4be83-17b4-48b6-9cbd-5ad48b1d3aae" />
