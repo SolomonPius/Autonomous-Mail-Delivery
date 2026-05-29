@@ -230,9 +230,9 @@ After convergence at observation 7, the filter maintained certainty (p=1.0) for 
                          #   - Delivery controller    (start_delivery, delivery_step)
                          #   - Belief CSV logger      → belief_log.csv
 └── images/
-    ├── Topological_map.md #Diagram of the 11-office closed-loop hallway used for mail delivery
-    ├── Belief_convergence_table.md #Live demo data showing the Bayesian filter converging across observed colour patches
-    └── Team_photo.md #Abanoub Bashara & Solomon Pius with the TurtleBot3 Waffle Pi
+    ├── Topological_map.md                #Diagram of the 11-office closed-loop hallway used for mail delivery
+    ├── Belief_convergence_table.md       #Live demo data showing the Bayesian filter converging across observed colour patches
+    └── Team_photo.md                     #Abanoub Bashara & Solomon Pius with the TurtleBot3 Waffle Pi
 ```
 
 ROS node name: `color_line_follower_rgb_bayes_delivery`
