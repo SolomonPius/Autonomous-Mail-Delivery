@@ -8,6 +8,7 @@ A fully autonomous **TurtleBot3 Waffle Pi** capable of mail delivery along a clo
 <p align="center">
   <img src="images/delivery_demo.gif" width="600" alt="TurtleBot3 following the line and localizing on coloured office patches (6x speed)">
   <br><em>Full demo run: line following, colour-patch localization and deliveries (6x speed)</em>
+  <br><b><a href="videos/delivery_demo_full.mp4">▶ Watch the full-length video</a></b>
 </p>
 
 ---
@@ -124,6 +125,11 @@ Because the camera consistently misread colours in the first frames over a patch
 
 Localization was implemented as a **discrete Bayesian filter** over **11 office states** (offices 2–12) arranged in a closed loop. The filter maintained a belief distribution and updated it on each patch entry via a **predict → update cycle**.
 
+<p align="center">
+  <img width="200" alt="Topological map of the 11-office closed-loop hallway" src="https://github.com/user-attachments/assets/3662049a-6127-4e60-ba5a-253c268a3e10" />
+  <br><em>Topological map of the closed-loop hallway</em>
+</p>
+
 **Office colour map:**
 
 | Office | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
@@ -222,18 +228,30 @@ The final demonstration started the robot on the boundary between offices 6 and 
 
 After convergence at observation 7, the filter maintained certainty (p=1.0) for all subsequent patches.
 
+<p align="center">
+  <img width="586" alt="Belief output logged during the demo run" src="https://github.com/user-attachments/assets/2c68c584-da77-4a74-826f-6c84dc26ce91" />
+  <br><em>Belief output logged during the demo run</em>
+</p>
+
+<p align="center">
+  <img width="380" alt="Abanoub Bashara and Solomon Pius with the TurtleBot3 Waffle Pi" src="https://github.com/user-attachments/assets/72c4be83-17b4-48b6-9cbd-5ad48b1d3aae" />
+  <br><em>Abanoub Bashara and Solomon Pius with the TurtleBot3 Waffle Pi</em>
+</p>
+
 ---
 
 ## Repository Structure
 
 ```
 ├── README.md
-└── Final_project.py     # Single ROS node — all logic in LineFollowerColorAware class
-                         #   - PID line follower      (follow_line_pid, line_callback)
-                         #   - RGB colour classifier  (color_callback)
-                         #   - Bayesian filter        (bayes_update, transition_prob, measurement_prob)
-                         #   - Delivery controller    (start_delivery, delivery_step)
-                         #   - Belief CSV logger      → belief_log.csv
+├── Final_project.py     # Single ROS node — all logic in LineFollowerColorAware class
+│                        #   - PID line follower      (follow_line_pid, line_callback)
+│                        #   - RGB colour classifier  (color_callback)
+│                        #   - Bayesian filter        (bayes_update, transition_prob, measurement_prob)
+│                        #   - Delivery controller    (start_delivery, delivery_step)
+│                        #   - Belief CSV logger      → belief_log.csv
+├── videos/
+│   └── delivery_demo_full.mp4            #  Full-length demo run (1280×712, ~90 s)
 └── images/
     ├── delivery_demo.gif                 #  Demo run (6x speed), shown at the top of this README
     ├── Topological_map.md                #  Diagram of the 11-office closed-loop hallway used for mail delivery
