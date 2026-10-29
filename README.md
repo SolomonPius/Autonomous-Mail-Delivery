@@ -5,6 +5,11 @@
 
 A fully autonomous **TurtleBot3 Waffle Pi** capable of mail delivery along a closed-loop hallway, starting from an **unknown location** with no GPS, odometry, or SLAM. Localization is achieved entirely through probabilistic reasoning over noisy vision-based observations.
 
+<p align="center">
+  <img src="images/delivery_demo.gif" width="600" alt="TurtleBot3 following the line and localizing on coloured office patches (6x speed)">
+  <br><em>Full demo run: line following, colour-patch localization and deliveries (6x speed)</em>
+</p>
+
 ---
 
 ## Table of Contents
@@ -230,6 +235,7 @@ After convergence at observation 7, the filter maintained certainty (p=1.0) for 
                          #   - Delivery controller    (start_delivery, delivery_step)
                          #   - Belief CSV logger      → belief_log.csv
 └── images/
+    ├── delivery_demo.gif                 #  Demo run (6x speed), shown at the top of this README
     ├── Topological_map.md                #  Diagram of the 11-office closed-loop hallway used for mail delivery
     ├── Belief_convergence_table.md       #  Live demo data showing the Bayesian filter converging across observed colour patches
     └── Team_photo.md                     #  Abanoub Bashara & Solomon Pius with the TurtleBot3 Waffle Pi
